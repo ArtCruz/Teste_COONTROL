@@ -1,30 +1,106 @@
-
 img{
-    width: auto;
-    height: auto;
+    width: 8vh;
+    height: 8vh;
+    margin: 1vh 1vh;
+    border-radius: 5px;
 }
 
 .nav-bar{
-    background-color: yellow;
-    width: 50vh;
-    height: 20vh;
+    display: flex;
+    background-color: white;
+    border: 5px solid rgb(255, 90, 22);
+    width: 100%;
+    height: 9%;
 }
 
-.nav-bar a{
-    align-items: center;
+.logo{
+    width: 10vh;
+    height: 10vh;
+    margin: 0.5vh 1.5vh;
+    border-radius: 10px;
+    background-color: rgb(255, 90, 22);
+}
+
+.link-home{
+    display: flex;
     justify-content: center;
+    align-items: center;
+    margin: 0 2em;
+}
+
+.link-home a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+    font-size: 2em;
+    color: black;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+}
+
+.link-questoes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link-questoes a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+    font-size: 2em;
+    color: black;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
 }
 
 .titulo{
-    background-color: green;
+    display: flex;
+    align-items: center;
     justify-content: center;
+    padding-top: 1.5vh;
 }
 
 .titulo h1{
-    align-self: center;
-    justify-content: center;    
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
 }
 
-.row{
-    background-color: purple;
+.row{    
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 2vh 0 0 2vh;
+}
+
+.table-container{
+    max-height: 70vh;
+    overflow: auto;
+}
+
+thead{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: black;
+}
+
+.col-lg-6{
+    border-radius: 20px;
+    border: 3px solid rgba(0, 0, 0, 0.177);
+}
+
+.text-center{
+    display: flex;  
+    font-family: 'Comfortaa', cursive;
+    font-size: 5vh;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1vh;
+}
+
+.card-body{
+    padding-top: 1vh;
 }

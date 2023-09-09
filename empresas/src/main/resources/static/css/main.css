@@ -1,0 +1,30 @@
+
+img{
+    width: auto;
+    height: auto;
+}
+
+.nav-bar{
+    background-color: yellow;
+    width: 50vh;
+    height: 20vh;
+}
+
+.nav-bar a{
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo{
+    background-color: green;
+    justify-content: center;
+}
+
+.titulo h1{
+    align-self: center;
+    justify-content: center;    
+}
+
+.row{
+    background-color: purple;
+}

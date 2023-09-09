@@ -15,38 +15,38 @@ public class EmpresaController {
 
     private EmpresaService empresaService;
 
-    public EmpresaController(EmpresaService empresaService){
+    public EmpresaController(EmpresaService empresaService) {
         super();
         this.empresaService = empresaService;
     }
 
     @GetMapping("/empresas")
-    public String listEmpresas(Model model){
+    public String listEmpresas(Model model) {
         model.addAttribute("empresas", empresaService.getAllEmpresas());
         return "empresas";
     }
 
     @GetMapping("/empresas/new")
-    public String createEmpresaForm(Model model){
+    public String createEmpresaForm(Model model) {
         Empresa empresa = new Empresa();
         model.addAttribute("empresa", empresa);
         return "create_empresa";
     }
 
     @PostMapping("/empresas")
-    public String saveEmpresa(@ModelAttribute("empresa") Empresa empresa){
+    public String saveEmpresa(@ModelAttribute("empresa") Empresa empresa) {
         empresaService.saveEmpresa(empresa);
         return "redirect:/empresas";
     }
 
     @GetMapping("/empresas/edit/{id}")
-    public String editEmpresaForm(@PathVariable Long id, Model model){
+    public String editEmpresaForm(@PathVariable Long id, Model model) {
         model.addAttribute("empresa", empresaService.getEmpresaById(id));
         return "edit_empresa";
     }
 
     @PostMapping("/empresas/{id}")
-    public String updateEmpresa(@PathVariable Long id, @ModelAttribute("empresa") Empresa empresa, Model model){
+    public String updateEmpresa(@PathVariable Long id, @ModelAttribute("empresa") Empresa empresa, Model model) {
 
         Empresa existingEmpresa = empresaService.getEmpresaById(id);
 
@@ -62,9 +62,9 @@ public class EmpresaController {
     }
 
     @GetMapping("/empresas/{id}")
-    public String deleteEmpresa(@PathVariable Long id){
+    public String deleteEmpresa(@PathVariable Long id) {
         empresaService.deleteEmpresaById(id);
         return "redirect:/empresas";
     }
-    
+
 }

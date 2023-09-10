@@ -1,5 +1,9 @@
 package com.teste_coontrol.empresas.entity;
 
+import java.util.Date;
+
+import org.springframework.format.annotation.DateTimeFormat;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -19,7 +23,8 @@ public class Empresa {
     private String nomeEmpresa;
 
     @Column(name = "data_fundacao", nullable = false)
-    private String dataFundacao;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private Date dataFundacao;
 
     @Column(name = "num_funcionarios", nullable = false)
     private int numFuncionarios;
@@ -34,7 +39,7 @@ public class Empresa {
 
     }
 
-    public Empresa(String nomeEmpresa, String dataFundacao, int numFuncionarios, String regiaoBrasil,
+    public Empresa(String nomeEmpresa, Date dataFundacao, int numFuncionarios, String regiaoBrasil,
             String setorAtuacao) {
         super();
         this.nomeEmpresa = nomeEmpresa;
@@ -60,11 +65,11 @@ public class Empresa {
         this.nomeEmpresa = nomeEmpresa;
     }
 
-    public String getDataFundacao() {
+    public Date getDataFundacao() {
         return dataFundacao;
     }
 
-    public void setDataFundacao(String dataFundacao) {
+    public void setDataFundacao(Date dataFundacao) {
         this.dataFundacao = dataFundacao;
     }
 

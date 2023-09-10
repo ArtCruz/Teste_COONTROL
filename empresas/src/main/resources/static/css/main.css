@@ -104,3 +104,16 @@ thead{
 .card-body{
     padding-top: 1vh;
 }
+
+.respostas{
+    width: 100vh;
+}
+
+.respostas-maior{
+    width: 42vh;
+    height: 150px;
+}
+
+textarea{
+    resize:none;
+}

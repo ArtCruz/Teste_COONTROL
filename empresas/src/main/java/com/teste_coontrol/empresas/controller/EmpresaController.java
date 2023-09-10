@@ -1,5 +1,10 @@
 package com.teste_coontrol.empresas.controller;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -65,6 +70,26 @@ public class EmpresaController {
     public String deleteEmpresa(@PathVariable Long id) {
         empresaService.deleteEmpresaById(id);
         return "redirect:/empresas";
+    }
+
+    @GetMapping("/questoes")
+    public String mostrarRegiaoMaisFuncionarios(Model model) {
+        String txt1 = empresaService.regiaoMaisFuncionarios();
+        model.addAttribute("respQ1", txt1);
+
+        String txt2 = empresaService.EmpresaMaisAntiga();
+        model.addAttribute("respQ2", txt2);
+
+        String txt3 = empresaService.regiaoMaisEmpresasIndustrial();
+        model.addAttribute("respQ3", txt3);
+
+        String txt4 = empresaService.numEmpresasSetorDecrescente();
+        model.addAttribute("respQ4", txt4);
+
+        String txt5 = empresaService.totalFuncionarios();
+        model.addAttribute("respQ5", txt5);
+
+        return "questoes";
     }
 
 }

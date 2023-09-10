@@ -17,4 +17,14 @@ public interface EmpresaService {
 
     void deleteEmpresaById(Long id);
 
+    String regiaoMaisFuncionarios();
+
+    String EmpresaMaisAntiga();
+
+    String regiaoMaisEmpresasIndustrial();
+
+    String numEmpresasSetorDecrescente();
+
+    String totalFuncionarios();
+
 }

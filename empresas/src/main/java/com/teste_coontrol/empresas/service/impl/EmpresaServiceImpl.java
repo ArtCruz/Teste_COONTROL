@@ -54,7 +54,7 @@ public class EmpresaServiceImpl implements EmpresaService {
     }
 
     public String regiaoMaisFuncionarios() {
-        Map<String, Integer> contFuncPorRegiao = new HashMap();
+        Map<String, Integer> contFuncPorRegiao = new HashMap<>();
 
         //Para cada empresa cadastrada, 
         for (Empresa empresa : getAllEmpresas()) {
@@ -124,7 +124,7 @@ public class EmpresaServiceImpl implements EmpresaService {
 
     public String regiaoMaisEmpresasIndustrial() {
 
-        Map<String, Integer> regioes = new HashMap();
+        Map<String, Integer> regioes = new HashMap<>();
 
         //Somente adicionara no map, regiões que tenham empresas no setor Industrial, e a cada nova empresa do setor Industrial
         //cuja região já está cadastrada, incrementará em 1 o valor de empresas nessa região
@@ -161,7 +161,7 @@ public class EmpresaServiceImpl implements EmpresaService {
     public String numEmpresasSetorDecrescente() {
         String txt = "";
 
-        Map<String, Integer> setores = new HashMap();
+        Map<String, Integer> setores = new HashMap<>();
 
         //Adiciona em um Map todos os Setores que possuem uma empresa, bem como a quantidade dessas empresas
         for (Empresa empresa : getAllEmpresas()) {

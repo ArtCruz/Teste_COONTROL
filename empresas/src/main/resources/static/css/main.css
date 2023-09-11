@@ -106,6 +106,7 @@ thead{
 }
 
 .respostas{
+    justify-content: center;
     width: 100vh;
 }
 
@@ -114,6 +115,20 @@ thead{
     height: 150px;
 }
 
+.form-group-q input{
+    margin-left: 25vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.enunciado{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
 textarea{
+    margin-left: 50vh;
     resize:none;
 }

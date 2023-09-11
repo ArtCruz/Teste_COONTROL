@@ -32,28 +32,29 @@
         </div>
 
         <div class="box-questions">
-            <div class="form-group">
-                <label>Resposta Questão 1:</label>
+            <div class="form-group-q">
+                <label class = "enunciado">Resposta Questão 1: Nome da região do brasil que apresenta maior número de funcionários,
+                    e o número de funcionários.</label>
                 <input class="respostas" th:value="${respQ1}" readonly>
             </div>
 
-            <div class="form-group">
-                <label>Resposta Questão 2:</label>
+            <div class="form-group-q">
+                <label class = "enunciado">Resposta Questão 2: O nome da empresa mais antiga.</label>
                 <input class="respostas" th:value="${respQ2}" readonly>
             </div>
 
-            <div class="form-group">
-                <label>Resposta Questão 3:</label>
+            <div class="form-group-q">
+                <label class = "enunciado">Resposta Questão 3: A região do brasil que tem maior número de empresas do setor Industrial.</label>
                 <input class="respostas" th:value="${respQ3}" readonly>
             </div>
 
-            <div class="form-group">
-                <label>Resposta Questão 4:</label>
-                <textarea class="respostas-maior" th:text="${respQ4}"></textarea>
+            <div class="form-group-q">
+                <label class = "enunciado">Resposta Questão 4: O número de empresas de cada setor de atuação em ordem decrescente.</label>
+                <textarea class="respostas-maior" th:text="${respQ4}" readonly></textarea>
             </div>
 
-            <div class="form-group">
-                <label>Resposta Questão 5:</label>
+            <div class="form-group-q">
+                <label class = "enunciado">Resposta Questão 5: O número total de funcionários de todas as empresas.</label>
                 <input class="respostas" th:value="${respQ5}" readonly>
             </div>
         </div>
